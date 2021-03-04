@@ -20,6 +20,8 @@ const images = [
 const gallaryListRef = document.querySelector('#gallery')
 
 const newMarkup = images.map(el => {
-  return gallaryListRef.insertAdjacentHTML('afterbegin', `<li><img class="gallary-img" src = "${el.url}" alt="${el.alt}" ></img></li>`)
-})
+  return 'afterbegin', `<li><img class="gallary-img" src = "${el.url}" alt="${el.alt}" ></img></li>`
+}).join('')
 
+
+gallaryListRef.insertAdjacentHTML('beforebegin', newMarkup)
